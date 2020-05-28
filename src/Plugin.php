@@ -48,6 +48,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface, Capable {
    */
   public static function getSubscribedEvents() {
     return [
+      ScriptEvents::POST_INSTALL_CMD => 'postCmd',
       ScriptEvents::POST_UPDATE_CMD => 'postCmd',
       PackageEvents::POST_PACKAGE_INSTALL => 'postPackage',
       PluginEvents::COMMAND => 'onCommand'

@@ -38,7 +38,7 @@ class ManageOptions {
    *   The scaffold otpions object
    */
   public function getOptions() {
-    return $this->packageOptions($this->composer->getPackage());
+    return ScaffoldOptions::create($this->composer->getPackage()->getExtra());
   }
 
   /**
@@ -51,7 +51,10 @@ class ManageOptions {
    *   The scaffold otpions object
    */
   public function packageOptions(PackageInterface $package) {
-    return ScaffoldOptions::create($package->getExtra());
+    $extra = isset($this->composer->getPackage()->getExtra()['composer-scaffold']['packages'][$package->getName()]) ?
+      $this->composer->getPackage()->getExtra()['composer-scaffold']['packages'][$package->getName()] :
+      [];
+    return ScaffoldOptions::create($extra);
   }
 
   /**
