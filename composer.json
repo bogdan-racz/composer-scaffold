@@ -3,6 +3,13 @@
   "description": "Test for Composer Scaffold.",
   "type": "composer-plugin",
   "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=5.6",
+    "composer-plugin-api": "^2.0.0"
+  },
+  "extra": {
+    "class": "Grasmash\\ComposerScaffold\\Plugin"
+  },
   "autoload": {
     "psr-4": {
       "Grasmash\\ComposerScaffold\\": "src/"
