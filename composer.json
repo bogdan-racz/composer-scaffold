@@ -17,12 +17,6 @@
       "Grasmash\\ComposerScaffold\\Tests\\": "tests/src"
     }
   },
-  "extra": {
-    "class": "Grasmash\\ComposerScaffold\\Plugin",
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  },
   "scripts": {
     "cs": "phpcs --standard=Drupal -n src tests",
     "cbf": "phpcbf --standard=Drupal -n src tests",
@@ -41,10 +35,8 @@
     "sort-packages": true
   },
   "require-dev": {
-    "composer/composer": "dev-master",
     "phpunit/phpunit": "^5.7.27|^6",
     "squizlabs/php_codesniffer": "^3.4.2",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-    "drupal/coder": "^8.3.3"
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
   }
 }
